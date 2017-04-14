@@ -44,21 +44,28 @@
 			text-align: center;
 			color:black;
 		}
-
+		.iblock {
+			display: inline-block;
+			width:35%;
+			height:60%;
+			font-size:150%;
+			opacity:0;
+			padding:2%;
+		}
+		.navbar-nav li {
+			line-height: 60px;
+		}
 		#screen1 {
 			background-color: #d8d4d4;
 		}
 		#screen2 {
 			position: relative;
 			top:-10px;
-			background-color: lightblue;
+			background-color: #ADD8E6;
 		}
 		#nameHeader {
 			font-size: x-large;
 			color: white;
-		}
-		.navbar-nav li {
-			line-height: 60px;
 		}
 		#mainHeaderUl {
 			width:100%;
@@ -99,7 +106,27 @@
 		}
 		#aboutmeheader {
 			opacity: 0;
-			font-size: 1000%;
+			font-size: 800%;
+		}
+		#proj1
+		{
+			margin-left: 5%;
+		}
+		#proj2
+		{
+			margin-right: 5%;
+			margin-left: 20%;
+			margin-bottom: 2%;
+		}
+		#proj3
+		{
+			margin-left: 5%;
+			margin-right: 20%;
+		}
+		#proj4
+		{
+			margin-right: 5%;
+			margin-bottom: 10%;
 		}
 		@keyframes fadein {
 			from { opacity: 0; }
@@ -111,9 +138,22 @@
 			40% {transform: translateY(-30px);}
 			60% {transform: translateY(-15px);}
 		}
-
+		@keyframes slide-left {
+    		100% { transform: translateX(25%); }
+		}
+		@keyframes slide-right {
+    		100% { transform: translateX(-25%); }
+		}
 		.fade.triggeredCSS3 {
 			animation: fadein 4s;
+			animation-fill-mode: forwards;
+		}
+		.flyright.triggeredCSS3 {
+			animation: slide-right 0.5s forwards, fadein 0.5s;
+			animation-fill-mode: forwards;
+		}
+		.flyleft.triggeredCSS3 {
+			animation: slide-left 0.5s forwards, fadein 0.5s;
 			animation-fill-mode: forwards;
 		}
 	</style>
@@ -137,7 +177,7 @@
 		$(document).ready(function() {
 			$("#arrow").click(function() {
 				$('html,body').animate({
-					scrollTop: $("#screen2").offset().top - 45},
+					scrollTop: $("#screen2").offset().top},
 					1000);
 			});
 			$(".screen2").inViewport(function(px){
@@ -156,23 +196,40 @@
 			<div id="mainHeaderDiv" class="container-fluid">
 				<ul id="mainHeaderUl" class="nav navbar-nav">
 					<li id="github-profile"><a href="https://github.com/nikhilajjarapu/" target="_blank"> <img src="pictures/PNG/GitHub-Mark-64px.png" height="30" ></a></li>
-					<li id="devpost-profile"><a href="https://devpost.com/nikhilajjarapu/" > <img src="pictures/devpost.svg" height="30" ></a></li>
-					<li id="linkedin-profile"><a href="https://linkedin.com/in/nikhilajjarapu/" > <img src="pictures/linkedin.svg" height="30" ></a></li>
+					<li id="devpost-profile"><a href="https://devpost.com/nikhilajjarapu/" target="_blank"> <img src="pictures/devpost.svg" height="30" ></a></li>
+					<li id="linkedin-profile"><a href="https://linkedin.com/in/nikhilajjarapu/" target="_blank"> <img src="pictures/linkedin.svg" height="30" ></a></li>
 					<li id="nameHeader" style="float: right">Nikhil Ajjarapu</li>
 				</ul>
 			</div>
 		</nav>
+		<br><br><br>
 		<p id="welcome" class="text"> Welcome. </p>
 		<p id="intro1" class="text"> My name is Nikhil. </p>
 		<br>
 		<p id="intro2" class="text"> Programmer. Student. Athlete. </p>
-		<br><br>
+		<br>
 		<div id="arrow" class="text"><img src="http://freevector.co/wp-content/uploads/2010/10/61041-downwards-arrow-key.png" width="4%" height="4%" style="filter: invert(0%);" /></div>
+		<br>
 	</div> 
 	<div id="screen2" class="screens">
 		<br>
 		<br>
-		<p id="aboutmeheader" class="text screen2 fade">About Me</p>
+		<p id="aboutmeheader" class="text screen2 fade">About Me</p><!--
+		--><div id="proj1" class="iblock screen2 flyleft" style="animation-delay: 1.5s;background-color: #a6cddd;"><!--
+		--><p class = "text"> <b>60 Seconds</b><br>60 Seconds is an iOS and messaging app that calls you daily at 9 PM and asks you to record a 60 second description of what happened that day - essentially an online journal. In an iOS app, it allows you to access all past recordings, along with a rating of whether you were happy or not, which it generates using machine learning and sentiment analysis. Won first place at BaseHacks.</p><!--
+		--></div><!--;
+		--><div id="proj2" class="iblock screen2 flyright" style="animation-delay: 2s;background-color: #9cc2d1;"><!--
+		--><p class = "text"><b>MedicAI</b><br>A messaging service that analyzes a combination of images or text through machine learning and natural language processing to diagnose and return a disease. Implemented location analysis, translation, nearest doctor and more. Message +1 (510) 768-8341 to receive immediate medical assistance about any condition you may have. Won Grand Prize of $1000 at Synopsys Science Fair 2017.</p><!--
+		--></div><!--
+		--><br><!--
+		--><div id="proj3" class="iblock screen2 flyleft" style="animation-delay: 2.5s;background-color: #97bbc9;"><!--
+		--><p class = "text"> <b>ScanNShop</b><br>ScanNShop scans a barcode from a product, checks its price and scans a credit card to purchase the good. It stores items ready to buy in a cart, ready to buy whenever the consumer is ready. Built through primarily Android Studio and Java, along with help from multiple APIs such as the Walmart Open API and the PayPal API to assist the function of the app.</p><!--
+		--></div><!--
+		--><div id="proj4" class="iblock screen2 flyright" style="animation-delay: 3s;background-color: #95b8c6;"><!--
+		--><p class = "text"><b>DisasterCostCalculator</b><br>An algorithm that predicts the costs of a natural disaster from satellite images of the disaster. Built with Python and utilizes several APIs (including NASA's satellite imagery API) Uses machine learning to estimate the cost through a two-step process with 94% accuracy rate. Won 3 awards at the regional level of Synopsys Science Fair 2016.</p><!--
+		--></div>
+	</div>
+	<div id="screen3" class="screens">
 	</div>
 </body>
 </html>
