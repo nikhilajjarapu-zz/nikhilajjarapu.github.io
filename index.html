@@ -30,9 +30,6 @@
 			z-indexwebkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
 			filter: invert(100%);
 		}
-		.screen2 {
-
-		}
 		.screens {
 			min-height:100vh;
 			min-width:100vw;
@@ -59,8 +56,9 @@
 			background-color: #d8d4d4;
 		}
 		#screen2 {
-			position: relative;
-			top:-10px;
+			background-color: #c0e09f;
+		}
+		#screen3 {
 			background-color: #ADD8E6;
 		}
 		#nameHeader {
@@ -78,7 +76,7 @@
 		}
 
 		#welcome {
-			font-size: 1000%;
+			font-size: 900%;
 			animation: fadein 3s;
 		}
 		#intro1 {
@@ -105,6 +103,10 @@
 			animation-fill-mode: forwards;
 		}
 		#aboutmeheader {
+			opacity: 0;
+			font-size: 800%;
+		}
+		#projectsheader {
 			opacity: 0;
 			font-size: 800%;
 		}
@@ -139,21 +141,21 @@
 			60% {transform: translateY(-15px);}
 		}
 		@keyframes slide-left {
-    		100% { transform: translateX(25%); }
+			100% { transform: translateX(25%); }
 		}
 		@keyframes slide-right {
-    		100% { transform: translateX(-25%); }
+			100% { transform: translateX(-25%); }
 		}
 		.fade.triggeredCSS3 {
 			animation: fadein 4s;
 			animation-fill-mode: forwards;
 		}
 		.flyright.triggeredCSS3 {
-			animation: slide-right 0.5s forwards, fadein 0.5s;
+			animation: slide-right 1s forwards, fadein 1s;
 			animation-fill-mode: forwards;
 		}
 		.flyleft.triggeredCSS3 {
-			animation: slide-left 0.5s forwards, fadein 0.5s;
+			animation: slide-left 1s forwards, fadein 1s;
 			animation-fill-mode: forwards;
 		}
 	</style>
@@ -183,12 +185,14 @@
 			$(".screen2").inViewport(function(px){
 				if(px) $(this).addClass("triggeredCSS3") ;
 			});
+			$(".screen3").inViewport(function(px){
+				if(px) $(this).addClass("triggeredCSS3") ;
+			});
 		});
 
 	</script>
 
 </head>
-
 
 <body>
 	<div id="screen1" class="screens">
@@ -202,34 +206,38 @@
 				</ul>
 			</div>
 		</nav>
-		<br><br><br>
+		<br>
 		<p id="welcome" class="text"> Welcome. </p>
 		<p id="intro1" class="text"> My name is Nikhil. </p>
+		<p id="intro2" class="text"> I'm a 17 year old junior at Lynbrook High School. </p>
 		<br>
-		<p id="intro2" class="text"> Programmer. Student. Athlete. </p>
-		<br>
-		<div id="arrow" class="text"><img src="http://freevector.co/wp-content/uploads/2010/10/61041-downwards-arrow-key.png" width="4%" height="4%" style="filter: invert(0%);" /></div>
+		<p class="text" style="font-size: 175%;opacity: 0;animation: fadein 3s;animation-delay: 4.5s;animation-fill-mode: forwards;"> Learn more. </p>
+		<div id="arrow" class="text"><img src="http://freevector.co/wp-content/uploads/2010/10/61041-downwards-arrow-key.png" width="3.5%" height="3.5%" style="filter: invert(0%);" /></div>
 		<br>
 	</div> 
-	<div id="screen2" class="screens">
-		<br>
-		<br>
-		<p id="aboutmeheader" class="text screen2 fade">About Me</p><!--
-		--><div id="proj1" class="iblock screen2 flyleft" style="animation-delay: 1.5s;background-color: #a6cddd;"><!--
+	<div id="screen2" class="screens"><!--
+		--><br>
+		<p id="aboutmeheader" class="screen2 fade text">About Me </p><!--
+	--><br><!--
+	--><p class="screen2 fade text" style="font-size: 200%;margin:3.5%;"> Hey! My name is Nikhil and I am a 17-year-old junior currently attending Lynbrook High School in San Jose, CA. I am a junior aspiring to work in the computer science field. I have experience coding in several different languages and I would like to start exploring the various pathways this field offers. I am experienced in a multitude of programming languages, and have received a diversity of awards for the various projects I have undertaken in different academic fields. I am very goal-oriented and driven, and can bring enthusiasm and passion to any project, as shown in the multiple award-winning independent research projects I have undertaken. I have experienced and lived in multiple cultures (including Switzerland and India), allowing me to experience many cultures as well as develop highly skilled social abilities. </p><!--
+	--><br><!--
+	--></div>
+	<div id="screen3" class="screens">
+		<br><br>
+		<p id="projectsheader" class="text screen3 fade">Projects</p><!--
+		--><div id="proj1" class="iblock screen3 flyleft" style="animation-delay: 0.75s;background-color: #a3d0e0;"><!--
 		--><p class = "text"> <b>60 Seconds</b><br>60 Seconds is an iOS and messaging app that calls you daily at 9 PM and asks you to record a 60 second description of what happened that day - essentially an online journal. In an iOS app, it allows you to access all past recordings, along with a rating of whether you were happy or not, which it generates using machine learning and sentiment analysis. Won first place at BaseHacks.</p><!--
 		--></div><!--;
-		--><div id="proj2" class="iblock screen2 flyright" style="animation-delay: 2s;background-color: #9cc2d1;"><!--
+		--><div id="proj2" class="iblock screen3 flyright" style="animation-delay: 1s;background-color: #9fcfe0;"><!--
 		--><p class = "text"><b>MedicAI</b><br>A messaging service that analyzes a combination of images or text through machine learning and natural language processing to diagnose and return a disease. Implemented location analysis, translation, nearest doctor and more. Message +1 (510) 768-8341 to receive immediate medical assistance about any condition you may have. Won Grand Prize of $1000 at Synopsys Science Fair 2017.</p><!--
 		--></div><!--
 		--><br><!--
-		--><div id="proj3" class="iblock screen2 flyleft" style="animation-delay: 2.5s;background-color: #97bbc9;"><!--
+		--><div id="proj3" class="iblock screen3 flyleft" style="animation-delay: 1.25s;background-color: #9cc8d8;"><!--
 		--><p class = "text"> <b>ScanNShop</b><br>ScanNShop scans a barcode from a product, checks its price and scans a credit card to purchase the good. It stores items ready to buy in a cart, ready to buy whenever the consumer is ready. Built through primarily Android Studio and Java, along with help from multiple APIs such as the Walmart Open API and the PayPal API to assist the function of the app.</p><!--
 		--></div><!--
-		--><div id="proj4" class="iblock screen2 flyright" style="animation-delay: 3s;background-color: #95b8c6;"><!--
+		--><div id="proj4" class="iblock screen3 flyright" style="animation-delay: 1.5s;background-color: #94bfce;"><!--
 		--><p class = "text"><b>DisasterCostCalculator</b><br>An algorithm that predicts the costs of a natural disaster from satellite images of the disaster. Built with Python and utilizes several APIs (including NASA's satellite imagery API) Uses machine learning to estimate the cost through a two-step process with 94% accuracy rate. Won 3 awards at the regional level of Synopsys Science Fair 2016.</p><!--
-		--></div>
-	</div>
-	<div id="screen3" class="screens">
-	</div>
+	--></div>
+</div>
 </body>
 </html>
