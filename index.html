@@ -3,145 +3,176 @@
 <head>
 	<title>Nikhil Ajjarapu</title>
 
-<!-- IMPORTS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script> 
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<!-- IMPORTS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.js"
+	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	crossorigin="anonymous"></script> 
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
 
 
-<!-- STYLE -->
-<style type="text/css">
-	* {
-		font-family: Roboto;
-		font-weight: 100;
-	}
-	html, body {
-		margin:0;     
-    	height:100vh; 
-    	width:100vw;  
-	}
+	<!-- STYLE -->
+	<style type="text/css">
+		* {
+			font-family: Roboto;
+			font-weight: 100;
+		}
+		html, body {
+			margin:0;     
+			height:100vh; 
+			width:100vw;  
+		}
+		img {
+			z-indexwebkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
+			filter: invert(100%);
+		}
+		.screen2 {
 
-	.screens {
-		min-height:100vh;
-    	min-width:100vw;
-    	margin:0;
-    	padding:0;
-	}
+		}
+		.screens {
+			min-height:100vh;
+			min-width:100vw;
+			margin:0;
+			padding:0;
+		}
+		.text {
+			margin-top:3.5%;
+			text-align: center;
+			color:black;
+		}
 
-	#screen1 {
-		background-color: #d8d4d4;
-	}
-	#screen2 {
-		position: relative;
-		top:-10px;
-		background-color: lightblue;
-	}
-	#nameHeader {
-		font-size: x-large;
-		color: white;
-	}
-	.navbar-nav li {
- 		line-height: 60px;
-	}
-	#mainHeaderUl {
-		width:100%;
-	}
-	#mainHeader {
-		position: fixed;
-		top: 0%;
-   		left: 0;
-    	right: 0;
-	}
-	
-	#welcome {
-		margin-top:3.5%;
-		text-align: center;
-		font-size: 1000%;
-		color:black;
-		animation: fadein 3s;
-	}
-	#intro1 {
-		opacity: 0;
-		margin-top:3.5%;
-		text-align: center;
-		font-size:400%;
-		color:black;
-		animation: fadein 3s;
-		animation-delay: 1.5s;
-		animation-fill-mode: forwards;
-	}
+		#screen1 {
+			background-color: #d8d4d4;
+		}
+		#screen2 {
+			position: relative;
+			top:-10px;
+			background-color: lightblue;
+		}
+		#nameHeader {
+			font-size: x-large;
+			color: white;
+		}
+		.navbar-nav li {
+			line-height: 60px;
+		}
+		#mainHeaderUl {
+			width:100%;
+		}
+		#mainHeader {
+			position: fixed;
+			top: 0%;
+			left: 0;
+			right: 0;
+		}
 
-	#intro2 {
-		opacity: 0;
-		margin-top:3.5%;
-		text-align: center;
-		font-size:300%;
-		color:black;
-		animation: fadein 3s;
-		animation-delay: 3s;
-		animation-fill-mode: forwards;
-	}
+		#welcome {
+			font-size: 1000%;
+			animation: fadein 3s;
+		}
+		#intro1 {
+			opacity: 0;
+			font-size:400%;
+			animation: fadein 3s;
+			animation-delay: 1.5s;
+			animation-fill-mode: forwards;
+		}
 
-	#arrow {
-		opacity: 0;
-		margin-top:3.5%;
-		text-align: center;
-		font-size:300%;
-		color:black;
-		animation: bounce 2s infinite, fadein 3s;
-		animation-delay: 5s; 
-		animation-fill-mode: forwards;
-	}
-	@keyframes fadein {
-    	from { opacity: 0; }
-    	to   { opacity: 1; }
-	}
+		#intro2 {
+			opacity: 0;
+			font-size:300%;
+			animation: fadein 3s;
+			animation-delay: 3s;
+			animation-fill-mode: forwards;
+		}
 
-	@keyframes bounce {
-		0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
- 		40% {transform: translateY(-30px);}
- 		60% {transform: translateY(-15px);}
-	}
+		#arrow {
+			opacity: 0;
+			font-size:300%;
+			animation: bounce 2s infinite, fadein 3s;
+			animation-delay: 5s; 
+			animation-fill-mode: forwards;
+		}
+		#aboutmeheader {
+			opacity: 0;
+			font-size: 1000%;
+		}
+		@keyframes fadein {
+			from { opacity: 0; }
+			to   { opacity: 1; }
+		}
 
-	img {
-		z-indexwebkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
-    	filter: invert(100%);
-	}
-</style>
+		@keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+			40% {transform: translateY(-30px);}
+			60% {transform: translateY(-15px);}
+		}
 
-<!--JAVASCRIPT-->
+		.fade.triggeredCSS3 {
+			animation: fadein 4s;
+			animation-fill-mode: forwards;
+		}
+	</style>
 
+	<!--JAVASCRIPT-->
+	<script type="text/JAVASCRIPT">
+		;(function($, win) {
+			$.fn.inViewport = function(cb) {
+				return this.each(function(i,el){
+					function visPx(){
+						var H = $(this).height(),
+						r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+						return cb.call(el, Math.max(0, t>0? H-t : (b<H?b:H)));  
+					} visPx();
+					$(win).on("resize scroll", visPx);
+				});
+			};
+		}(jQuery, window));
+
+
+		$(document).ready(function() {
+			$("#arrow").click(function() {
+				$('html,body').animate({
+					scrollTop: $("#screen2").offset().top - 45},
+					1000);
+			});
+			$(".screen2").inViewport(function(px){
+				if(px) $(this).addClass("triggeredCSS3") ;
+			});
+		});
+
+	</script>
 
 </head>
 
 
 <body>
-<div id="screen1" class="screens">
-<nav id="mainHeader" class="navbar navbar-inverse navbar-static-top" role="navigation">
-  <div id="mainHeaderDiv" class="container-fluid">
-    <ul id="mainHeaderUl" class="nav navbar-nav">
-      <li id="github-profile"><a href="https://github.com/nikhilajjarapu/" target="_blank"> <img src="pictures/PNG/GitHub-Mark-64px.png" height="30" ></a></li>
-      <li id="devpost-profile"><a href="https://devpost.com/nikhilajjarapu/" > <img src="pictures/devpost.svg" height="30" ></a></li>
-      <li id="linkedin-profile"><a href="https://linkedin.com/in/nikhilajjarapu/" > <img src="pictures/linkedin.svg" height="30" ></a></li>
-      <li id="nameHeader" style="float: right">Nikhil Ajjarapu</li>
-    </ul>
-  </div>
-</nav>
-<p id="welcome"> Welcome. </p>
-<p id="intro1"> My name is Nikhil. </p>
-<br>
-<p id="intro2"> Programmer. Student. Athlete. </p>
-<br><br>
-<div id="arrow"><img src="http://freevector.co/wp-content/uploads/2010/10/61041-downwards-arrow-key.png" width="4%" height="4%" style="filter: invert(0%);" /></div>
-</div> 
-<div id="screen2" class="screens">
-
-</div>
+	<div id="screen1" class="screens">
+		<nav id="mainHeader" class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div id="mainHeaderDiv" class="container-fluid">
+				<ul id="mainHeaderUl" class="nav navbar-nav">
+					<li id="github-profile"><a href="https://github.com/nikhilajjarapu/" target="_blank"> <img src="pictures/PNG/GitHub-Mark-64px.png" height="30" ></a></li>
+					<li id="devpost-profile"><a href="https://devpost.com/nikhilajjarapu/" > <img src="pictures/devpost.svg" height="30" ></a></li>
+					<li id="linkedin-profile"><a href="https://linkedin.com/in/nikhilajjarapu/" > <img src="pictures/linkedin.svg" height="30" ></a></li>
+					<li id="nameHeader" style="float: right">Nikhil Ajjarapu</li>
+				</ul>
+			</div>
+		</nav>
+		<p id="welcome" class="text"> Welcome. </p>
+		<p id="intro1" class="text"> My name is Nikhil. </p>
+		<br>
+		<p id="intro2" class="text"> Programmer. Student. Athlete. </p>
+		<br><br>
+		<div id="arrow" class="text"><img src="http://freevector.co/wp-content/uploads/2010/10/61041-downwards-arrow-key.png" width="4%" height="4%" style="filter: invert(0%);" /></div>
+	</div> 
+	<div id="screen2" class="screens">
+		<br>
+		<br>
+		<p id="aboutmeheader" class="text screen2 fade">About Me</p>
+	</div>
 </body>
 </html>
