@@ -10,7 +10,7 @@
 	<script
 	src="https://code.jquery.com/jquery-3.2.1.js"
 	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-	crossorigin="anonymous"></script> 
+	crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
 
@@ -22,9 +22,9 @@
 			font-weight: 100;
 		}
 		html, body {
-			margin:0;     
-			height:100vh; 
-			width:100vw;  
+			margin:0;
+			height:100vh;
+			width:100vw;
 		}
 		img {
 			z-indexwebkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
@@ -119,7 +119,7 @@
 			opacity: 0;
 			font-size:300%;
 			animation: bounce 2s infinite, fadein 3s;
-			animation-delay: 5s; 
+			animation-delay: 5s;
 			animation-fill-mode: forwards;
 		}
 		#aboutmeheader {
@@ -203,7 +203,7 @@
 					function visPx(){
 						var H = $(this).height(),
 						r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
-						return cb.call(el, Math.max(0, t>0? H-t : (b<H?b:H)));  
+						return cb.call(el, Math.max(0, t>0? H-t : (b<H?b:H)));
 					} visPx();
 					$(win).on("resize scroll", visPx);
 				});
@@ -240,24 +240,24 @@
 					<li id="github-profile"><a href="https://github.com/nikhilajjarapu/" target="_blank"> <img src="pictures/PNG/GitHub-Mark-64px.png" height="30" ></a></li>
 					<li id="devpost-profile"><a href="https://devpost.com/nikhilajjarapu/" target="_blank"> <img src="pictures/devpost.svg" height="30" ></a></li>
 					<li id="linkedin-profile"><a href="https://linkedin.com/in/nikhilajjarapu/" target="_blank"> <img src="pictures/linkedin.svg" height="30" ></a></li>
-					<li id="nameHeader" style="float: right">Nikhil Ajjarapu</li>
+					<li id="nameHeader" style="float: right"> Nikhil Ajjarapu</li>
 				</ul>
 			</div>
 		</nav>
 		<br>
 		<p id="welcome" class="text"> Welcome. </p>
 		<p id="intro1" class="text"> My name is Nikhil. </p>
-		<p id="intro2" class="text"> I'm a 18 year old freshman at UT Austin. </p>
+		<p id="intro2" class="text"> I'm a 19 year old Turing Scholar at UT Austin. </p>
 		<br>
 		<p class="text" style="font-size: 175%;opacity: 0;animation: fadein 3s;animation-delay: 4.5s;animation-fill-mode: forwards;"> Learn more. </p>
 		<div id="arrow" class="text"><img src="http://freevector.co/wp-content/uploads/2010/10/61041-downwards-arrow-key.png" width="3.5%" height="3.5%" style="filter: invert(0%);" /></div>
 		<br>
-	</div> 
+	</div>
 	<div id="screen2" class="screens"><!--
 	--><br>
 		<p id="aboutmeheader" class="screen2 fade text">About Me </p><!--
 	--><br><!--
-	--><p class="screen2 fade text" style="font-size: 200%;margin:3.5%;"> Hey! My name is Nikhil and I am a 18-year-old freshman currently attending University of Texas, Austin. I am aspiring to work in the computer science field. I have experience coding in several different languages and I would like to start exploring the various pathways this field offers. I am experienced in a multitude of programming languages, and have received a diversity of awards for the various projects I have undertaken in different academic fields. I am very goal-oriented and driven, and can bring enthusiasm and passion to any project, as shown in the multiple award-winning independent research projects I have undertaken. I have experienced and lived in multiple cultures (including Switzerland and India), allowing me to experience many cultures as well as develop highly skilled social abilities. </p><!--
+	--><p class="screen2 fade text" style="font-size: 200%;margin:3.5%;"> Hey! My name is Nikhil Ajjarapu. I'm a Turing Scholar at the University of Texas, Austin. I'm also a member of the UT Austin Varsity Debate Team and Texas Convergent. In my free time, I love playing tennis, basketball, and ultimate frisbee. Please feel free to contact me at nikhil.ajjarapu@utexas.edu or (650) 713-6689 with any inquiries or opportunities! </p><!--
 	--><br><!--
 --></div>
 <div id="screen3" class="screens">
@@ -267,7 +267,7 @@
 		--><p class = "text"> <b>60 Seconds</b><br>60 Seconds is an iOS and messaging app that calls you daily at 9 PM and asks you to record a 60 second description of what happened that day - essentially an online journal. In an iOS app, it allows you to access all past recordings, along with a rating of whether you were happy or not, which it generates using machine learning and sentiment analysis. Won first place at BaseHacks.</p><!--
 		--></div><!--;
 		--><div id="proj2" class="iblock screen3 flyright" style="animation-delay: 1s;background-color: #9fcfe0;"><!--
-		--><p class = "text"><b>MedicAI</b><br>A messaging service that analyzes a combination of images or text through machine learning and natural language processing to diagnose and return a disease. Implemented location analysis, translation, nearest doctor and more. Message +1 (510) 768-8341 to receive immediate medical assistance about any condition you may have. Won Grand Prize of $1000 at Synopsys Science Fair 2017.</p><!--
+		--><p class = "text"><b>MedicAI</b><br>A messaging service that analyzes a combination of images or text through machine learning and natural language processing to diagnose and return a disease. Implemented location analysis, translation, nearest doctor and more. Intended for third-world countries, where poverty is widespread but technology is cheap and widespread. Won Grand Prize of $1000 at Synopsys Science Fair 2017.</p><!--
 		--></div><!--
 		--><br><!--
 		--><div id="proj3" class="iblock screen3 flyleft" style="animation-delay: 1.25s;background-color: #9cc8d8;"><!--
@@ -277,10 +277,5 @@
 		--><p class = "text"><b>DisasterCostCalculator</b><br>An algorithm that predicts the costs of a natural disaster from satellite images of the disaster. Built with Python and utilizes several APIs (including NASA's satellite imagery API) Uses machine learning to estimate the cost through a two-step process with 94% accuracy rate. Won 3 awards at the regional level of Synopsys Science Fair 2016.</p><!--
 	--></div>
 </div>
-<div id="screen4">
-	<br>
-	<p id="contactheader" class="text screen4 fade">Contact Me</p><!--
-	--><p class="text screen4 fade" style="font-size: 175%;"> Please contact me at nikhil (dot) ajjarapu (at) utexas (dot) edu if you would like to get in touch. Thank you! </p><br><!--
---></div>
 </body>
 </html>
